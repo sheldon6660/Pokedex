@@ -4,3 +4,7 @@ let pokemonList = [
 	{name: 'Charizard', height: 17, types: ['fire', 'flying']},
 	{name: 'Dragonite', height: 22, types: ['dragon', 'flying']},
 ];
+
+for (let i = 0; i < pokemonList.length; i++) {
+	document.write(pokemonList[i].name + " (Height: " + pokemonList[i].height + ") ")
+}
