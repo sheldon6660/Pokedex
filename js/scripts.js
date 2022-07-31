@@ -20,14 +20,14 @@ let pokemonRepository = (function () {
 			height: 22,
 			types: ['dragon', 'flying']
 		},
-	]
+	];
 
 	function add(pokemon) {
 		if (typeof pokemon === 'object') {
-			if (Object.keys(pokemonList[0]).every((key) => key in item));
+			if (Object.keys(pokemonList[0]).every((key) => key in pokemon));
 			pokemonList.push(pokemon);
 		} else {
-			alert('Pokemon is invalid!')
+			alert('Pokemon is invalid!');
 		}
 	}
 
