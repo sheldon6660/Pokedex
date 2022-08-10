@@ -24,10 +24,11 @@ let pokemonRepository = (function () {
 
 	function add(pokemon) {
 		if (typeof pokemon === 'object') {
-			if (Object.keys(pokemonList[0]).every((key) => key in pokemon));
-			pokemonList.push(pokemon);
-		} else {
-			alert('Pokemon is invalid!');
+			if (Object.keys(pokemonList[0]).every((key) => key in pokemon)); {
+				pokemonList.push(pokemon);
+			} else {
+				alert('Pokemon is invalid!');
+			}
 		}
 	}
 
@@ -39,10 +40,17 @@ let pokemonRepository = (function () {
 		add: add,
 		getAll: getAll,
 	};
+
 })();
+
 
 // forEach loop that iterates over pokemonList and writes names and heights
 pokemonRepository.getAll().forEach(function(pokemon) {
-	document.write('<p>' + pokemon.name + ' is ' + pokemon.height + ' units tall, and is of the ' + pokemon.types[0] + ' type. ')
-	document.write(pokemon.name + ' is also of the ' + pokemon.types[1] + ' type. ' + '</p>')
-})
+	let list = document.querySelector('ul')
+	let listItem = document.createElement('li');
+	let button = document.createElement('button');
+	button.innerText = pokemon.name
+	button.classList.add('button')
+	listItem.appendChild(button)
+	list.appendChild(listItem)
+})();
