@@ -31,7 +31,7 @@ let pokemonRepository = (function () {
 	    ) {
 	    	pokemonList.push(pokemon);
 	    } else {
-	    	console.log("pokemon is not correct");
+	    	alert("Pokemon is not valid");
 	    }
 	}
 
